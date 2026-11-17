@@ -362,68 +362,63 @@ INSERT INTO Program (program_id, program_name, degree_level, department_id) VALU
 
 INSERT INTO Faculty
 (faculty_id, first_name, last_name, email, phone, hire_date, title, salary, department_id, mentor_id) VALUES
-(1,  'Ahmed',   'Al-Farsi',    'ahmed.alfarsi@uni.edu',    '050-1001', '2010-09-01', 'Professor',           22000.00, 1, NULL),
-(2,  'Sara',    'Hassan',      'sara.hassan@uni.edu',      '050-1002', '2013-01-15', 'Associate Professor', 18000.00, 1, 1),
-(3,  'Omar',    'Khalid',      'omar.khalid@uni.edu',      '050-1003', '2015-08-20', 'Assistant Professor', 14000.00, 1, 2),
-(4,  'Lina',    'Nasser',      'lina.nasser@uni.edu',      '050-1004', '2016-03-10', 'Assistant Professor', 14000.00, 1, 1),
-(5,  'Yousef',  'Saleh',       'yousef.saleh@uni.edu',     '050-1005', '2012-05-01', 'Professor',           21000.00, 2, NULL),
-(6,  'Mona',    'Rahman',      'mona.rahman@uni.edu',      '050-1006', '2017-09-01', 'Lecturer',            11000.00, 2, 5),
-(7,  'Khaled',  'Othman',      'khaled.othman@uni.edu',    '050-1007', '2014-11-11', 'Associate Professor', 17500.00, 3, NULL),
-(8,  'Huda',    'Mansour',     'huda.mansour@uni.edu',     '050-1008', '2018-02-01', 'Assistant Professor', 13500.00, 3, 7),
-(9,  'Faisal',  'Ali',         'faisal.ali@uni.edu',       '050-1009', '2011-07-07', 'Professor',           23000.00, 4, NULL),
-(10, 'Noura',   'Ibrahim',     'noura.ibrahim@uni.edu',    '050-1010', '2019-10-01', 'Lecturer',            10500.00, 4, 9),
-(11, 'Tariq',   'Mahmoud',     'tariq.mahmoud@uni.edu',    '050-1011', '2016-06-15', 'Assistant Professor', 13800.00, 5, NULL),
-(12, 'Reem',    'Yahya',       'reem.yahya@uni.edu',       '050-1012', '2020-01-10', 'Lecturer',            10800.00, 5, 11),
-(13, 'Sami',    'Zaid',        'sami.zaid@uni.edu',        '050-1013', '2013-04-04', 'Associate Professor', 17200.00, 1, 1),
-(14, 'Dina',    'Bakr',        'dina.bakr@uni.edu',        '050-1014', '2017-12-12', 'Assistant Professor', 14200.00, 2, 5),
-(15, 'Hassan',  'Farouk',      'hassan.farouk@uni.edu',    '050-1015', '2019-03-03', 'Lecturer',            10900.00, 3, 7);
+(1,  'Ahmed',   'Al-Farsi',    'alfarsi@qu.edu.sa',    '050-1001', '2010-09-01', 'Professor',           22000.00, 1, NULL),
+(2,  'Sara',    'Hassan',      'hassan@qu.edu.sa',      '050-1002', '2013-01-15', 'Associate Professor', 18000.00, 1, 1),
+(3,  'Omar',    'Khalid',      'khalid@uqu.edu.sa',      '050-1003', '2015-08-20', 'Assistant Professor', 14000.00, 1, 2),
+(4,  'Lina',    'Nasser',      'lina@qu.edu.sa',      '050-1004', '2016-03-10', 'Assistant Professor', 14000.00, 1, 1),
+(5,  'Yousef',  'Saleh',       'yousef@qu.edu.sa',     '050-1005', '2012-05-01', 'Professor',           21000.00, 2, NULL),
+(6,  'Mona',    'Rahman',      'mona@qu.edu.sa',      '050-1006', '2017-09-01', 'Lecturer',            11000.00, 2, 5),
+(7,  'Khaled',  'Othman',      'khaled@qu.edu.sa',    '050-1007', '2014-11-11', 'Associate Professor', 17500.00, 3, NULL),
+(8,  'Huda',    'Mansour',     'mansour@qu.edu.sa',     '050-1008', '2018-02-01', 'Assistant Professor', 13500.00, 3, 7),
+(9,  'Faisal',  'Ali',         'faisal@qu.edu.sa',       '050-1009', '2011-07-07', 'Professor',           23000.00, 4, NULL),
+(10, 'Noura',   'Ibrahim',     'noura@qu.edu.sa',    '050-1010', '2019-10-01', 'Lecturer',            10500.00, 4, 9),
+(11, 'Tariq',   'Mahmoud',     'mahmoud@qu.edu.sa',    '050-1011', '2016-06-15', 'Assistant Professor', 13800.00, 5, NULL),
+(12, 'Reem',    'Yahya',       'yahya@qu.edu.sa',       '050-1012', '2020-01-10', 'Lecturer',            10800.00, 5, 11),
+(13, 'Sami',    'Zaid',        'zaid@qu.edu.sa',        '050-1013', '2013-04-04', 'Associate Professor', 17200.00, 1, 1),
+(14, 'Dina',    'Bakr',        'dina@qu.edu.sa',        '050-1014', '2017-12-12', 'Assistant Professor', 14200.00, 2, 5),
+(15, 'Hassan',  'Farouk',      'farouk@qu.edu.sa',    '050-1015', '2019-03-03', 'Lecturer',            10900.00, 3, 7);
 
--- Assign department heads
 UPDATE Department SET head_faculty_id = 1 WHERE department_id = 1;
 UPDATE Department SET head_faculty_id = 5 WHERE department_id = 2;
 UPDATE Department SET head_faculty_id = 7 WHERE department_id = 3;
 UPDATE Department SET head_faculty_id = 9 WHERE department_id = 4;
 UPDATE Department SET head_faculty_id = 11 WHERE department_id = 5;
 
--- =========================================================
--- 4. STUDENTS (30)
--- =========================================================
+
 INSERT INTO Student
 (student_id, first_name, last_name, email, phone, date_of_birth, enrollment_date, academic_status, program_id, supervisor_id) VALUES
-(1,  'Ali',     'Ahmad',      'ali.ahmad@student.edu',     '055-2001', '2000-02-11', '2019-09-01', 'Active',    1, 1),
-(2,  'Fatima',  'Saleh',      'fatima.saleh@student.edu',  '055-2002', '2001-03-22', '2020-09-01', 'Active',    1, 2),
-(3,  'Mohammed','Hussain',    'mohammed.h@student.edu',    '055-2003', '1999-07-15', '2018-09-01', 'Graduated', 1, 1),
-(4,  'Aisha',   'Omar',       'aisha.omar@student.edu',    '055-2004', '2002-01-09', '2021-09-01', 'Active',    1, 3),
-(5,  'Saud',    'Nasser',     'saud.nasser@student.edu',   '055-2005', '2000-11-30', '2019-09-01', 'Active',    2, 2),
-(6,  'Maryam',  'Khalid',     'maryam.khalid@student.edu', '055-2006', '1998-05-19', '2018-09-01', 'Active',    2, 1),
-(7,  'Abdullah','Rahman',     'abdullah.r@student.edu',    '055-2007', '1997-08-25', '2017-09-01', 'Active',    3, 1),
-(8,  'Layla',   'Faisal',     'layla.faisal@student.edu',  '055-2008', '2001-12-14', '2020-09-01', 'Active',    3, 13),
-(9,  'Nawaf',   'Sultan',     'nawaf.sultan@student.edu',  '055-2009', '2000-04-08', '2019-09-01', 'Suspended', 1, 4),
-(10, 'Hind',    'Majed',      'hind.majed@student.edu',    '055-2010', '2002-06-17', '2021-09-01', 'Active',    1, 2),
-(11, 'Sultan',  'Turki',      'sultan.turki@student.edu',  '055-2011', '1999-09-09', '2018-09-01', 'Graduated', 4, 5),
-(12, 'Amal',    'Saad',       'amal.saad@student.edu',     '055-2012', '2001-10-21', '2020-09-01', 'Active',    4, 6),
-(13, 'Fahad',   'Nayef',      'fahad.nayef@student.edu',   '055-2013', '2000-03-03', '2019-09-01', 'Active',    4, 5),
-(14, 'Razan',   'Waleed',     'razan.waleed@student.edu',  '055-2014', '2002-08-12', '2021-09-01', 'Active',    5, 14),
-(15, 'Bader',   'Hamad',      'bader.hamad@student.edu',   '055-2015', '1998-12-01', '2017-09-01', 'Active',    5, 5),
-(16, 'Jawaher', 'Salem',      'jawaher.salem@student.edu', '055-2016', '2001-05-27', '2020-09-01', 'Active',    6, 7),
-(17, 'Mansour', 'Ibrahim',    'mansour.i@student.edu',     '055-2017', '2000-07-04', '2019-09-01', 'Active',    6, 8),
-(18, 'Ghada',   'Yousef',     'ghada.yousef@student.edu',  '055-2018', '2002-11-16', '2021-09-01', 'Active',    6, 7),
-(19, 'Rakan',   'Fahad',      'rakan.fahad@student.edu',   '055-2019', '1999-01-23', '2018-09-01', 'Withdrawn', 6, 15),
-(20, 'Shahad',  'Nawaf',      'shahad.nawaf@student.edu',  '055-2020', '2001-09-05', '2020-09-01', 'Active',    7, 9),
-(21, 'Talal',   'Hamza',      'talal.hamza@student.edu',   '055-2021', '2000-06-30', '2019-09-01', 'Active',    7, 10),
-(22, 'Wafa',    'Adel',       'wafa.adel@student.edu',     '055-2022', '1998-02-18', '2018-09-01', 'Active',    7, 9),
-(23, 'Ziyad',   'Mazen',      'ziyad.mazen@student.edu',   '055-2023', '2001-04-11', '2020-09-01', 'Active',    8, 11),
-(24, 'Asma',    'Rashed',     'asma.rashed@student.edu',   '055-2024', '1997-10-07', '2017-09-01', 'Active',    8, 12),
-(25, 'Saeed',   'Nabil',      'saeed.nabil@student.edu',   '055-2025', '2000-12-25', '2019-09-01', 'Active',    8, 11),
-(26, 'Lama',    'Fouad',      'lama.fouad@student.edu',    '055-2026', '2002-03-14', '2021-09-01', 'Active',    1, 4),
-(27, 'Yara',    'Tariq',      'yara.tariq@student.edu',    '055-2027', '2001-08-08', '2020-09-01', 'Active',    2, 3),
-(28, 'Othman',  'Jamil',      'othman.jamil@student.edu',  '055-2028', '1999-11-19', '2018-09-01', 'Active',    3, 13),
-(29, 'Dalal',   'Khaled',     'dalal.khaled@student.edu',  '055-2029', '2002-01-02', '2021-09-01', 'Active',    4, 6),
-(30, 'Nasser',  'Ayman',      'nasser.ayman@student.edu',  '055-2030', '2000-05-20', '2019-09-01', 'Active',    5, 14);
+(1,  'Shakil',     'Hossain',      '472118102@qu.edu.sa',     '055-2001', '2000-02-11', '2019-09-01', 'Active',    1, 1),
+(2,  'Fatima',  'Saleh',      '425631523@qu.edu.sa',  '055-2002', '2001-03-22', '2020-09-01', 'Active',    1, 2),
+(3,  'Mohammed','Hussain',    '47215364@qu.edu.sa',    '055-2003', '1999-07-15', '2018-09-01', 'Graduated', 1, 1),
+(4,  'Aisha',   'Omar',       '485362154@qu.edu.sa',    '055-2004', '2002-01-09', '2021-09-01', 'Active',    1, 3),
+(5,  'Saud',    'Nasser',     '423664125@qu.edu.sa',   '055-2005', '2000-11-30', '2019-09-01', 'Active',    2, 2),
+(6,  'Maryam',  'Khalid',     '456321546@qu.edu.sa', '055-2006', '1998-05-19', '2018-09-01', 'Active',    2, 1),
+(7,  'Abdullah','Rahman',     '48795412@qu.edu.sa',    '055-2007', '1997-08-25', '2017-09-01', 'Active',    3, 1),
+(8,  'Layla',   'Faisal',     '456321456@qu.edu.sa',  '055-2008', '2001-12-14', '2020-09-01', 'Active',    3, 13),
+(9,  'Nawaf',   'Sultan',     '463214535@qu.edu.sa',  '055-2009', '2000-04-08', '2019-09-01', 'Suspended', 1, 4),
+(10, 'Hind',    'Majed',      '412546325@qu.edu.sa',    '055-2010', '2002-06-17', '2021-09-01', 'Active',    1, 2),
+(11, 'Sultan',  'Turki',      '451235478@qu.edu.sa',  '055-2011', '1999-09-09', '2018-09-01', 'Graduated', 4, 5),
+(12, 'Amal',    'Saad',       '412365423@qu.edu.sa',     '055-2012', '2001-10-21', '2020-09-01', 'Active',    4, 6),
+(13, 'Fahad',   'Nayef',      '423654125@qu.edu.sa',   '055-2013', '2000-03-03', '2019-09-01', 'Active',    4, 5),
+(14, 'Razan',   'Waleed',     '436541254@qu.edu.sa',  '055-2014', '2002-08-12', '2021-09-01', 'Active',    5, 14),
+(15, 'Bader',   'Hamad',      '445874524@qu.edu.sa',   '055-2015', '1998-12-01', '2017-09-01', 'Active',    5, 5),
+(16, 'Jawaher', 'Salem',      '465425834@qu.edu.sa', '055-2016', '2001-05-27', '2020-09-01', 'Active',    6, 7),
+(17, 'Mansour', 'Ibrahim',    '475863254@qu.edu.sa',     '055-2017', '2000-07-04', '2019-09-01', 'Active',    6, 8),
+(18, 'Ghada',   'Yousef',     '446354125@qu.edu.sa',  '055-2018', '2002-11-16', '2021-09-01', 'Active',    6, 7),
+(19, 'Rakan',   'Fahad',      '465235415@qu.edu.sa',   '055-2019', '1999-01-23', '2018-09-01', 'Withdrawn', 6, 15),
+(20, 'Shahad',  'Nawaf',      '425413546@qu.edu.sa',  '055-2020', '2001-09-05', '2020-09-01', 'Active',    7, 9),
+(21, 'Talal',   'Hamza',      '445687452@qu.edu.sa',   '055-2021', '2000-06-30', '2019-09-01', 'Active',    7, 10),
+(22, 'Wafa',    'Adel',       '489657243@qu.edu.sa',     '055-2022', '1998-02-18', '2018-09-01', 'Active',    7, 9),
+(23, 'Ziyad',   'Mazen',      '469874536@qu.edu.sa',   '055-2023', '2001-04-11', '2020-09-01', 'Active',    8, 11),
+(24, 'Asma',    'Rashed',     '425413658@qu.edu.sa',   '055-2024', '1997-10-07', '2017-09-01', 'Active',    8, 12),
+(25, 'Saeed',   'Nabil',      '442548796@qu.edu.sa',   '055-2025', '2000-12-25', '2019-09-01', 'Active',    8, 11),
+(26, 'Lama',    'Fouad',      '415789635@qu.edu.sa',    '055-2026', '2002-03-14', '2021-09-01', 'Active',    1, 4),
+(27, 'Yara',    'Tariq',      '475236452@qu.edu.sa',    '055-2027', '2001-08-08', '2020-09-01', 'Active',    2, 3),
+(28, 'Othman',  'Jamil',      '475863265@qu.edu.sa',  '055-2028', '1999-11-19', '2018-09-01', 'Active',    3, 13),
+(29, 'Dalal',   'Khaled',     '425635412@qu.edu.sa',  '055-2029', '2002-01-02', '2021-09-01', 'Active',    4, 6),
+(30, 'Nasser',  'Ayman',      '445698753@qu.edu.sa',  '055-2030', '2000-05-20', '2019-09-01', 'Active',    5, 14);
 
--- =========================================================
--- 5. RESEARCH PROJECTS (15)
--- =========================================================
+
 INSERT INTO ResearchProject
 (project_id, project_title, start_date, end_date, status, department_id, lead_faculty_id) VALUES
 (1,  'AI for Healthcare Diagnostics',          '2022-01-15', '2025-01-14', 'Active',    1, 1),
@@ -442,9 +437,7 @@ INSERT INTO ResearchProject
 (14, 'Autonomous Vehicle Navigation',           '2021-04-01', '2024-03-31', 'Active',    3, 15),
 (15, 'Astrophysics Data Mining',                '2023-06-01', NULL,         'Proposed',  5, 11);
 
--- =========================================================
--- 6. FACULTY–PROJECT SUPERVISION (M:N with attributes)
--- =========================================================
+
 INSERT INTO FacultyProject (faculty_id, project_id, supervision_role, start_date) VALUES
 (1,  1,  'Principal Investigator', '2022-01-15'),
 (2,  1,  'Co-Investigator',        '2022-01-15'),
@@ -476,10 +469,7 @@ INSERT INTO FacultyProject (faculty_id, project_id, supervision_role, start_date
 (7,  14, 'Co-Investigator',        '2021-04-01'),
 (11, 15, 'Principal Investigator', '2023-06-01');
 
--- =========================================================
--- 7. STUDENT–PROJECT PARTICIPATION (M:N with attributes)
--- contribution_percentage per project kept <= 100 via trigger (Task 7)
--- =========================================================
+
 INSERT INTO StudentProject
 (student_id, project_id, project_role, contribution_percentage, join_date) VALUES
 (1,  1,  'Lead Student', 40.00, '2022-01-20'),
@@ -507,16 +497,13 @@ INSERT INTO StudentProject
 (28, 14, 'Lead Student', 50.00, '2021-04-10'),
 (29, 14, 'Researcher',   50.00, '2021-05-01'),
 (30, 15, 'Lead Student', 100.00,'2023-06-10'),
--- Students in multiple projects (required for query #6)
 (1,  2,  'Researcher',   10.00, '2021-08-01'),
 (5,  1,  'Researcher',   10.00, '2022-06-01'),
 (7,  1,  'Assistant',    10.00, '2022-07-01'),
 (11, 5,  'Researcher',   10.00, '2022-09-01'),
 (16, 7,  'Researcher',   20.00, '2022-09-01');
 
--- =========================================================
--- 8. FUNDING SOURCES (8)
--- =========================================================
+
 INSERT INTO FundingSource (source_id, source_name, source_type, contact_email, country) VALUES
 (1, 'Ministry of Higher Education',  'Government',    'grants@mhe.gov',         'Saudi Arabia'),
 (2, 'National Science Foundation',   'Government',    'info@nsf.gov',           'USA'),
@@ -527,9 +514,7 @@ INSERT INTO FundingSource (source_id, source_name, source_type, contact_email, c
 (7, 'Saudi Aramco Research',         'Industry',      'research@aramco.com',    'Saudi Arabia'),
 (8, 'UNESCO Research Fund',          'International', 'research@unesco.org',    'France');
 
--- =========================================================
--- 9. FUNDING (project funding records)
--- =========================================================
+
 INSERT INTO Funding (funding_id, project_id, source_id, funding_amount, funding_date) VALUES
 (1,  1,  1, 500000.00, '2022-01-10'),
 (2,  1,  3, 250000.00, '2022-03-15'),
@@ -549,9 +534,7 @@ INSERT INTO Funding (funding_id, project_id, source_id, funding_amount, funding_
 (16, 12, 1, 100000.00, '2023-01-05'),
 (17, 15, 2,  75000.00, '2023-05-25');
 
--- =========================================================
--- 10. PUBLICATIONS (25)
--- =========================================================
+
 INSERT INTO Publication (publication_id, title, publication_type, publication_year, doi, journal_name) VALUES
 (1,  'Deep Learning for Medical Image Analysis',        'Journal',      2023, '10.1000/pub001', 'IEEE Transactions on Medical Imaging'),
 (2,  'IoT Security Challenges and Solutions',           'Journal',      2022, '10.1000/pub002', 'Journal of Cybersecurity'),
@@ -579,9 +562,7 @@ INSERT INTO Publication (publication_id, title, publication_type, publication_ye
 (24, 'Graph Neural Networks for Chemistry',             'Journal',      2023, '10.1000/pub024', 'Chemical Informatics'),
 (25, 'Fault-Tolerant Distributed Systems',              'Conference',   2022, '10.1000/pub025', NULL);
 
--- =========================================================
--- 11. PUBLICATION AUTHORS (author_order + is_corresponding)
--- =========================================================
+
 INSERT INTO PublicationAuthor (publication_id, faculty_id, author_order, is_corresponding) VALUES
 (1,  1, 1, TRUE),  (1, 2, 2, FALSE), (1, 3, 3, FALSE),
 (2,  2, 1, TRUE),  (2, 4, 2, FALSE),
@@ -609,9 +590,7 @@ INSERT INTO PublicationAuthor (publication_id, faculty_id, author_order, is_corr
 (24, 8, 1, TRUE),  (24, 7, 2, FALSE),
 (25, 12, 1, TRUE), (25, 11, 2, FALSE), (25, 10, 3, FALSE);
 
--- =========================================================
--- 12. CONFERENCES (8)
--- =========================================================
+
 INSERT INTO Conference (conference_id, conference_name, location, conference_date, submission_deadline) VALUES
 (1, 'IEEE International Conference on AI',        'Riyadh, Saudi Arabia', '2023-12-15', '2023-09-01'),
 (2, 'ACM SIGCOMM',                                'New York, USA',        '2023-08-20', '2023-04-15'),
@@ -622,9 +601,7 @@ INSERT INTO Conference (conference_id, conference_name, location, conference_dat
 (7, 'World Quantum Computing Summit',             'Geneva, Switzerland',  '2023-07-18', '2023-03-15'),
 (8, 'International Data Mining Conference',       'Paris, France',        '2023-05-22', '2023-01-20');
 
--- =========================================================
--- 13. SUBMISSIONS (20)
--- =========================================================
+
 INSERT INTO Submission (submission_id, publication_id, conference_id, submission_date, decision, decision_date) VALUES
 (1,  5,  2, '2023-04-10', 'Accepted', '2023-06-15'),
 (2,  11, 7, '2023-03-10', 'Accepted', '2023-05-20'),
@@ -647,9 +624,7 @@ INSERT INTO Submission (submission_id, publication_id, conference_id, submission
 (19, 10, 7, '2023-03-20', 'Accepted', '2023-05-25'),
 (20, 3,  3, '2023-06-25', 'Accepted', '2023-08-20');
 
--- =========================================================
--- 14. REVIEWS (30) - mix of internal faculty and external reviewers
--- =========================================================
+
 INSERT INTO Review (review_id, submission_id, reviewer_faculty_id, reviewer_name, review_score, review_comments, review_date) VALUES
 (1,  1,  1,    NULL,              8.5, 'Strong contribution, well written.',           '2023-05-01'),
 (2,  1,  3,    NULL,              7.5, 'Good but needs more experiments.',             '2023-05-02'),
@@ -682,9 +657,7 @@ INSERT INTO Review (review_id, submission_id, reviewer_faculty_id, reviewer_name
 (29, 16, 13,   NULL,              6.0, 'Needs revision.',                              '2023-09-10'),
 (30, 17, 9,    NULL,              9.0, 'Excellent.',                                   '2023-02-15');
 
--- =========================================================
--- 15. REVISIONS (20)
--- =========================================================
+
 INSERT INTO Revision (revision_id, submission_id, revision_number, revision_date, revision_notes) VALUES
 (1,  5,  1, '2023-07-15', 'Added more experimental results.'),
 (2,  5,  2, '2023-08-10', 'Improved clarity and fixed typos.'),
@@ -707,9 +680,7 @@ INSERT INTO Revision (revision_id, submission_id, revision_number, revision_date
 (19, 18, 1, '2023-02-28', 'Improved conclusion.'),
 (20, 20, 1, '2023-07-01', 'Added limitations section.');
 
--- =========================================================
--- 16. EQUIPMENT (10)
--- =========================================================
+
 INSERT INTO Equipment (equipment_id, equipment_name, serial_number, purchase_date, condition_status, department_id) VALUES
 (1,  'GPU Server NVIDIA A100',      'SN-GPU-001', '2022-01-10', 'Good',           1),
 (2,  'High-Performance Cluster',    'SN-HPC-002', '2021-06-15', 'Good',           1),
@@ -722,9 +693,7 @@ INSERT INTO Equipment (equipment_id, equipment_name, serial_number, purchase_dat
 (9,  'Particle Detector',           'SN-PAR-009', '2020-12-12', 'Poor',           5),
 (10, 'Spectrometer',                'SN-SPE-010', '2022-07-07', 'Good',           5);
 
--- =========================================================
--- 17. EQUIPMENT USAGE (M:N with usage attributes)
--- =========================================================
+
 INSERT INTO EquipmentUsage (equipment_id, project_id, usage_date, usage_purpose) VALUES
 (1,  1,  '2022-02-01', 'Training deep learning models'),
 (1,  1,  '2022-05-10', 'Model evaluation'),
@@ -747,9 +716,7 @@ INSERT INTO EquipmentUsage (equipment_id, project_id, usage_date, usage_purpose)
 (5,  14, '2021-05-01', 'Autonomous vehicle parts'),
 (7,  5,  '2022-06-01', 'Network optimization modeling');
 
--- =========================================================
--- VERIFICATION QUERIES
--- =========================================================
+
 SELECT 'Departments'        AS table_name, COUNT(*) AS row_count FROM Department
 UNION ALL SELECT 'Programs',          COUNT(*) FROM Program
 UNION ALL SELECT 'Students',          COUNT(*) FROM Student
@@ -769,7 +736,6 @@ UNION ALL SELECT 'Faculty-Project',   COUNT(*) FROM FacultyProject
 UNION ALL SELECT 'Student-Project',   COUNT(*) FROM StudentProject;
 
 
--- Task 4
 
 SELECT s.student_id,
        CONCAT(s.first_name,' ',s.last_name) AS student_name,
@@ -800,7 +766,7 @@ SELECT f.faculty_id,
 FROM Faculty f
 JOIN Student s ON s.supervisor_id = f.faculty_id
 GROUP BY f.faculty_id, f.first_name, f.last_name
-HAVING COUNT(s.student_id) > 5
+HAVING COUNT(s.student_id) > 2
 ORDER BY num_students DESC;
 
 
@@ -857,7 +823,6 @@ ORDER BY num_authors DESC;
 
 
 
--- Example: faculty_id = 1
 SELECT p.publication_id,
        p.title,
        p.publication_year,
@@ -877,12 +842,11 @@ SELECT c.conference_id,
 FROM Conference c
 JOIN Submission s ON c.conference_id = s.conference_id
 GROUP BY c.conference_id, c.conference_name
-HAVING COUNT(s.submission_id) > 5
+HAVING COUNT(s.submission_id) > 2
 ORDER BY num_submissions DESC;
 
 
 
--- Example: decision = 'Accepted'
 SELECT s.submission_id,
        p.title,
        c.conference_name,
@@ -923,7 +887,6 @@ ORDER BY f.faculty_id;
 
 
 
--- Example: equipment_id = 1 (GPU Server)
 SELECT DISTINCT rp.project_id,
        rp.project_title,
        e.equipment_name
@@ -954,7 +917,6 @@ ORDER BY f.faculty_id;
 
 
 
--- Method A: correlated subquery
 SELECT rp.project_id,
        rp.project_title,
        (SELECT SUM(f.funding_amount)
@@ -970,7 +932,7 @@ WHERE (SELECT SUM(f.funding_amount)
                  GROUP BY project_id) AS totals
        );
 
--- Method B: ORDER BY + LIMIT (simpler, MySQL)
+
 SELECT rp.project_id,
        rp.project_title,
        SUM(f.funding_amount) AS total_funding
@@ -1024,12 +986,6 @@ ORDER BY avg_contribution DESC;
 
 
 
--- =========================================================
--- Task 5: Database Views
--- Run after Task 3 (data loaded)
--- =========================================================
-
--- ---------- View 1 ----------
 CREATE OR REPLACE VIEW vw_StudentResearchProfile AS
 SELECT
     s.student_id,
@@ -1055,7 +1011,8 @@ GROUP BY s.student_id, s.first_name, s.last_name, s.email,
          p.program_name, p.degree_level, d.department_name,
          f.first_name, f.last_name, f.title;
 
--- ---------- View 2 ----------
+
+
 CREATE OR REPLACE VIEW vw_FacultyResearchProfile AS
 SELECT
     f.faculty_id,
@@ -1081,7 +1038,7 @@ FROM Faculty f
 JOIN Department d   ON f.department_id = d.department_id
 LEFT JOIN Faculty m ON f.mentor_id = m.faculty_id;
 
--- ---------- View 3 ----------
+
 CREATE OR REPLACE VIEW vw_ProjectFundingSummary AS
 SELECT
     rp.project_id,
@@ -1101,7 +1058,8 @@ LEFT JOIN Funding fu       ON rp.project_id = fu.project_id
 GROUP BY rp.project_id, rp.project_title, rp.status,
          d.department_name, f.first_name, f.last_name;
 
--- ---------- View 4 ----------
+
+
 CREATE OR REPLACE VIEW vw_PublicationAuthorSummary AS
 SELECT
     p.publication_id,
@@ -1125,7 +1083,55 @@ GROUP BY p.publication_id, p.title, p.publication_type,
          p.publication_year, p.journal_name;
 
 
--- ---------- View 7 ----------
+
+
+
+CREATE OR REPLACE VIEW vw_StudentOwnProfile AS
+SELECT
+    s.student_id,
+    CONCAT(s.first_name, ' ', s.last_name) AS student_name,
+    s.email,
+    s.enrollment_date,
+    s.academic_status,
+    p.program_name,
+    p.degree_level,
+    d.department_name,
+    CONCAT(f.first_name, ' ', f.last_name) AS supervisor_name
+FROM Student s
+JOIN Program p      ON s.program_id = p.program_id
+JOIN Department d   ON p.department_id = d.department_id
+LEFT JOIN Faculty f ON s.supervisor_id = f.faculty_id
+WHERE s.student_id = CAST(
+        SUBSTRING_INDEX(CURRENT_USER(), 'stu_', -1) AS UNSIGNED
+      );
+
+
+
+
+CREATE OR REPLACE VIEW vw_FacultyOwnProfile AS
+SELECT
+    f.faculty_id,
+    CONCAT(f.first_name, ' ', f.last_name) AS faculty_name,
+    f.title,
+    f.email,
+    d.department_name,
+    (SELECT COUNT(*) FROM FacultyProject fp
+     WHERE fp.faculty_id = f.faculty_id)    AS num_projects,
+    (SELECT COUNT(*) FROM PublicationAuthor pa
+     WHERE pa.faculty_id = f.faculty_id)    AS num_publications,
+    (SELECT COUNT(*) FROM Student s
+     WHERE s.supervisor_id = f.faculty_id)  AS num_supervised_students,
+    CONCAT(m.first_name, ' ', m.last_name)  AS mentor_name
+FROM Faculty f
+JOIN Department d   ON f.department_id = d.department_id
+LEFT JOIN Faculty m ON f.mentor_id = m.faculty_id
+WHERE f.faculty_id = CAST(
+        SUBSTRING_INDEX(CURRENT_USER(), 'fac_', -1) AS UNSIGNED
+      );
+
+
+
+
 CREATE OR REPLACE VIEW vw_ConferenceSubmissionStatus AS
 SELECT
     c.conference_id,
@@ -1145,13 +1151,833 @@ FROM Conference c
 LEFT JOIN Submission s ON c.conference_id = s.conference_id
 GROUP BY c.conference_id, c.conference_name, c.location, c.conference_date;
 
--- ---------- Verification ----------
 SELECT 'Views created' AS status;
 SHOW FULL TABLES WHERE Table_type = 'VIEW';
 
--- Sample outputs
-SELECT * FROM vw_StudentResearchProfile ORDER BY num_projects DESC LIMIT 5;
-SELECT * FROM vw_FacultyResearchProfile ORDER BY num_publications DESC LIMIT 5;
-SELECT * FROM vw_ProjectFundingSummary ORDER BY total_funding DESC LIMIT 5;
-SELECT * FROM vw_PublicationAuthorSummary ORDER BY num_authors DESC LIMIT 5;
+SELECT * FROM vw_StudentResearchProfile ORDER BY num_projects DESC LIMIT 10;
+SELECT * FROM vw_FacultyResearchProfile ORDER BY num_publications DESC LIMIT 10;
+SELECT * FROM vw_ProjectFundingSummary ORDER BY total_funding DESC LIMIT 10;
+SELECT * FROM vw_PublicationAuthorSummary ORDER BY num_authors DESC LIMIT 10;
 SELECT * FROM vw_ConferenceSubmissionStatus ORDER BY total_submissions DESC;
+
+
+
+DELIMITER $$
+CREATE PROCEDURE sp_AddResearchProject (
+    IN  p_project_id       INT,
+    IN  p_project_title    VARCHAR(200),
+    IN  p_start_date       DATE,
+    IN  p_end_date         DATE,
+    IN  p_status           VARCHAR(20),
+    IN  p_department_id    INT,
+    IN  p_lead_faculty_id  INT,
+    OUT p_result_message   VARCHAR(255)
+)
+proc_body: BEGIN
+    DECLARE v_dept_exists     INT DEFAULT 0;
+    DECLARE v_faculty_exists  INT DEFAULT 0;
+    DECLARE v_faculty_dept    INT DEFAULT NULL;
+
+    IF p_project_id IS NULL OR p_project_id <= 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'project_id must be a positive integer.';
+    END IF;
+
+    IF p_project_title IS NULL OR TRIM(p_project_title) = '' THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'project_title cannot be empty.';
+    END IF;
+
+    IF p_start_date IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'start_date is required.';
+    END IF;
+
+    IF p_end_date IS NOT NULL AND p_end_date < p_start_date THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'end_date cannot be earlier than start_date.';
+    END IF;
+
+    IF p_status NOT IN ('Proposed','Active','Completed','Cancelled') THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'status must be Proposed, Active, Completed, or Cancelled.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_dept_exists
+    FROM Department WHERE department_id = p_department_id;
+
+    IF v_dept_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Department does not exist.';
+    END IF;
+
+    IF p_lead_faculty_id IS NOT NULL THEN
+        SELECT COUNT(*), MAX(department_id)
+          INTO v_faculty_exists, v_faculty_dept
+        FROM Faculty WHERE faculty_id = p_lead_faculty_id;
+
+        IF v_faculty_exists = 0 THEN
+            SIGNAL SQLSTATE '45000'
+                SET MESSAGE_TEXT = 'Lead faculty does not exist.';
+        END IF;
+
+        IF v_faculty_dept <> p_department_id THEN
+            SIGNAL SQLSTATE '45000'
+                SET MESSAGE_TEXT = 'Lead faculty must belong to the project department.';
+        END IF;
+    END IF;
+
+    IF EXISTS (SELECT 1 FROM ResearchProject WHERE project_id = p_project_id) THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'A project with this project_id already exists.';
+    END IF;
+
+    INSERT INTO ResearchProject
+        (project_id, project_title, start_date, end_date,
+         status, department_id, lead_faculty_id)
+    VALUES
+        (p_project_id, p_project_title, p_start_date, p_end_date,
+         p_status, p_department_id, p_lead_faculty_id);
+
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('INSERT', 'ResearchProject', CAST(p_project_id AS CHAR),
+            NULL, CONCAT('title=', p_project_title, '; status=', p_status));
+
+    SET p_result_message = CONCAT('Project ', p_project_id, ' created successfully.');
+
+END$$
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE PROCEDURE sp_RegisterStudentInProject (
+    IN  p_student_id       INT,
+    IN  p_project_id       INT,
+    IN  p_project_role     VARCHAR(50),
+    IN  p_contribution_pct DECIMAL(5,2),
+    OUT p_result_message   VARCHAR(255)
+)
+proc_body: BEGIN
+    DECLARE v_student_exists  INT DEFAULT 0;
+    DECLARE v_project_exists  INT DEFAULT 0;
+    DECLARE v_already_reg     INT DEFAULT 0;
+    DECLARE v_current_total   DECIMAL(10,2) DEFAULT 0;
+
+    IF p_student_id IS NULL OR p_project_id IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'student_id and project_id are required.';
+    END IF;
+
+    IF p_contribution_pct IS NULL
+       OR p_contribution_pct < 0
+       OR p_contribution_pct > 100 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'contribution_percentage must be between 0 and 100.';
+    END IF;
+
+    IF p_project_role NOT IN ('Researcher','Assistant','Lead Student','Intern','Volunteer') THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Invalid project_role.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_student_exists
+    FROM Student WHERE student_id = p_student_id;
+    IF v_student_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Student does not exist.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_project_exists
+    FROM ResearchProject WHERE project_id = p_project_id;
+    IF v_project_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Project does not exist.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_already_reg
+    FROM StudentProject
+    WHERE student_id = p_student_id AND project_id = p_project_id;
+    IF v_already_reg > 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Student is already registered in this project.';
+    END IF;
+
+    SELECT COALESCE(SUM(contribution_percentage), 0)
+      INTO v_current_total
+    FROM StudentProject
+    WHERE student_id = p_student_id;
+
+    IF v_current_total + p_contribution_pct > 100 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Total contribution for this student would exceed 100%.';
+    END IF;
+
+    INSERT INTO StudentProject
+        (student_id, project_id, project_role, contribution_percentage, join_date)
+    VALUES
+        (p_student_id, p_project_id, p_project_role, p_contribution_pct, CURDATE());
+
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('INSERT', 'StudentProject',
+            CONCAT(p_student_id,'-',p_project_id),
+            NULL,
+            CONCAT('role=', p_project_role, '; pct=', p_contribution_pct));
+
+    SET p_result_message = CONCAT('Student ', p_student_id,
+                                  ' registered in project ', p_project_id, '.');
+
+END$$
+DELIMITER ;
+
+
+
+
+DELIMITER $$
+
+CREATE PROCEDURE sp_SubmitPublicationToConference (
+    IN  p_publication_id INT,
+    IN  p_conference_id  INT,
+    IN  p_submission_date DATE,
+    OUT p_result_message VARCHAR(255)
+)
+proc_body: BEGIN
+    DECLARE v_pub_exists       INT DEFAULT 0;
+    DECLARE v_conf_exists      INT DEFAULT 0;
+    DECLARE v_deadline         DATE DEFAULT NULL;
+    DECLARE v_duplicate        INT DEFAULT 0;
+    DECLARE v_new_sub_id       INT DEFAULT 0;
+
+    IF p_publication_id IS NULL OR p_conference_id IS NULL THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'publication_id and conference_id are required.';
+    END IF;
+
+    IF p_submission_date IS NULL THEN
+        SET p_submission_date = CURDATE();
+    END IF;
+
+    IF p_submission_date > CURDATE() THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'submission_date cannot be in the future.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_pub_exists
+    FROM Publication WHERE publication_id = p_publication_id;
+    IF v_pub_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Publication does not exist.';
+    END IF;
+
+    SELECT COUNT(*), MAX(submission_deadline)
+      INTO v_conf_exists, v_deadline
+    FROM Conference WHERE conference_id = p_conference_id;
+    IF v_conf_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Conference does not exist.';
+    END IF;
+
+    IF v_deadline IS NOT NULL AND p_submission_date > v_deadline THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Submission date is after the conference deadline.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_duplicate
+    FROM Submission
+    WHERE publication_id = p_publication_id
+      AND conference_id  = p_conference_id;
+    IF v_duplicate > 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'This publication is already submitted to this conference.';
+    END IF;
+
+    SELECT COALESCE(MAX(submission_id), 0) + 1 INTO v_new_sub_id FROM Submission;
+
+    INSERT INTO Submission
+        (submission_id, publication_id, conference_id,
+         submission_date, decision, decision_date)
+    VALUES
+        (v_new_sub_id, p_publication_id, p_conference_id,
+         p_submission_date, 'Pending', NULL);
+
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('INSERT', 'Submission', CAST(v_new_sub_id AS CHAR), NULL,
+            CONCAT('pub=', p_publication_id, '; conf=', p_conference_id));
+
+    SET p_result_message = CONCAT('Submission ', v_new_sub_id, ' created with Pending status.');
+
+END$$
+DELIMITER ;
+
+
+
+DELIMITER $$
+CREATE FUNCTION fn_CalculateTotalProjectFunding (p_project_id INT)
+RETURNS DECIMAL(14,2)
+DETERMINISTIC
+READS SQL DATA
+BEGIN
+    DECLARE v_total   DECIMAL(14,2) DEFAULT 0;
+    DECLARE v_exists  INT DEFAULT 0;
+
+    IF p_project_id IS NULL OR p_project_id <= 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'fn_CalculateTotalProjectFunding: project_id must be positive.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_exists
+    FROM ResearchProject WHERE project_id = p_project_id;
+
+    IF v_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'fn_CalculateTotalProjectFunding: project does not exist.';
+    END IF;
+
+    SELECT COALESCE(SUM(funding_amount), 0) INTO v_total
+    FROM Funding WHERE project_id = p_project_id;
+
+    RETURN v_total;
+END$$
+DELIMITER ;
+
+
+
+
+DELIMITER $$
+CREATE FUNCTION fn_CountFacultyPublications (p_faculty_id INT)
+RETURNS INT
+DETERMINISTIC
+READS SQL DATA
+BEGIN
+    DECLARE v_count  INT DEFAULT 0;
+    DECLARE v_exists INT DEFAULT 0;
+
+    IF p_faculty_id IS NULL OR p_faculty_id <= 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'fn_CountFacultyPublications: faculty_id must be positive.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_exists FROM Faculty WHERE faculty_id = p_faculty_id;
+    IF v_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'fn_CountFacultyPublications: faculty does not exist.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_count
+    FROM PublicationAuthor WHERE faculty_id = p_faculty_id;
+
+    RETURN v_count;
+END$$
+DELIMITER ;
+
+
+
+DELIMITER $$
+CREATE FUNCTION fn_TotalStudentContribution (p_student_id INT)
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+READS SQL DATA
+BEGIN
+    DECLARE v_total  DECIMAL(10,2) DEFAULT 0;
+    DECLARE v_exists INT DEFAULT 0;
+
+    IF p_student_id IS NULL OR p_student_id <= 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'fn_TotalStudentContribution: student_id must be positive.';
+    END IF;
+
+    SELECT COUNT(*) INTO v_exists FROM Student WHERE student_id = p_student_id;
+    IF v_exists = 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'fn_TotalStudentContribution: student does not exist.';
+    END IF;
+
+    SELECT COALESCE(SUM(contribution_percentage), 0) INTO v_total
+    FROM StudentProject WHERE student_id = p_student_id;
+
+    RETURN v_total;
+END$$
+DELIMITER ;
+
+
+
+CALL sp_AddResearchProject(
+    101, 'Test Project', '2024-01-01', '2025-12-31',
+    'Active', 1, 1, @msg);
+SELECT @msg AS procedure_1_result;
+
+
+CALL sp_RegisterStudentInProject(28, 1, 'Researcher', 10, @msg);
+SELECT @msg AS procedure_2_result;
+
+
+CALL sp_SubmitPublicationToConference(7, 3, '2023-06-01', @msg);
+SELECT @msg AS procedure_3_result;
+
+
+SELECT fn_CalculateTotalProjectFunding(1)  AS funding_project_1;
+SELECT fn_CalculateTotalProjectFunding(6)  AS funding_project_6;
+SELECT fn_CalculateTotalProjectFunding(12) AS funding_project_12;
+
+SELECT fn_CountFacultyPublications(1)      AS pubs_faculty_1;
+SELECT fn_CountFacultyPublications(2)      AS pubs_faculty_2;
+
+SELECT fn_TotalStudentContribution(1)      AS contrib_student_1;
+SELECT fn_TotalStudentContribution(9)      AS contrib_student_9; 
+
+
+
+
+
+
+DELIMITER $$
+CREATE TRIGGER trg_studentproject_contrib_limit_insert
+BEFORE INSERT ON StudentProject FOR EACH ROW
+BEGIN
+    DECLARE v_current_total DECIMAL(10,2);
+    SELECT COALESCE(SUM(contribution_percentage),0) INTO v_current_total
+    FROM StudentProject WHERE student_id = NEW.student_id;
+    IF v_current_total + NEW.contribution_percentage > 100 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Total contribution for this student would exceed 100%.';
+    END IF;
+END$$
+
+CREATE TRIGGER trg_studentproject_contrib_limit_update
+BEFORE UPDATE ON StudentProject FOR EACH ROW
+BEGIN
+    DECLARE v_other_total DECIMAL(10,2);
+    SELECT COALESCE(SUM(contribution_percentage),0) INTO v_other_total
+    FROM StudentProject
+    WHERE student_id = NEW.student_id
+      AND NOT (student_id = OLD.student_id AND project_id = OLD.project_id);
+    IF v_other_total + NEW.contribution_percentage > 100 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Total contribution for this student would exceed 100%.';
+    END IF;
+END$$
+
+
+CREATE TRIGGER trg_student_valid_supervisor_insert
+BEFORE INSERT ON Student FOR EACH ROW
+BEGIN
+    DECLARE v_exists INT DEFAULT 0;
+    DECLARE v_fac_dept INT;
+    DECLARE v_fac_title VARCHAR(50);
+    DECLARE v_stu_dept INT;
+    IF NEW.supervisor_id IS NOT NULL THEN
+        SELECT COUNT(*), MAX(department_id), MAX(title)
+          INTO v_exists, v_fac_dept, v_fac_title
+        FROM Faculty WHERE faculty_id = NEW.supervisor_id;
+        IF v_exists = 0 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Supervisor does not exist in Faculty.';
+        END IF;
+        SELECT department_id INTO v_stu_dept FROM Program WHERE program_id = NEW.program_id;
+        IF v_fac_dept <> v_stu_dept THEN
+            SIGNAL SQLSTATE '45000'
+                SET MESSAGE_TEXT = 'Supervisor must belong to the same department as the student''s program.';
+        END IF;
+        IF v_fac_title NOT IN ('Professor','Associate Professor','Assistant Professor') THEN
+            SIGNAL SQLSTATE '45000'
+                SET MESSAGE_TEXT = 'Only Professor/Associate/Assistant Professor may supervise.';
+        END IF;
+    END IF;
+END$$
+
+
+CREATE TRIGGER trg_student_valid_supervisor_update
+BEFORE UPDATE ON Student FOR EACH ROW
+BEGIN
+    DECLARE v_exists INT DEFAULT 0;
+    DECLARE v_fac_dept INT;
+    DECLARE v_fac_title VARCHAR(50);
+    DECLARE v_stu_dept INT;
+    IF NEW.supervisor_id IS NOT NULL THEN
+        SELECT COUNT(*), MAX(department_id), MAX(title)
+          INTO v_exists, v_fac_dept, v_fac_title
+        FROM Faculty WHERE faculty_id = NEW.supervisor_id;
+        IF v_exists = 0 THEN
+            SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Supervisor does not exist in Faculty.';
+        END IF;
+        SELECT department_id INTO v_stu_dept FROM Program WHERE program_id = NEW.program_id;
+        IF v_fac_dept <> v_stu_dept THEN
+            SIGNAL SQLSTATE '45000'
+                SET MESSAGE_TEXT = 'Supervisor must belong to the same department as the student''s program.';
+        END IF;
+        IF v_fac_title NOT IN ('Professor','Associate Professor','Assistant Professor') THEN
+            SIGNAL SQLSTATE '45000'
+                SET MESSAGE_TEXT = 'Only Professor/Associate/Assistant Professor may supervise.';
+        END IF;
+    END IF;
+END$$
+
+
+CREATE TRIGGER trg_funding_no_negative_insert
+BEFORE INSERT ON Funding FOR EACH ROW
+BEGIN
+    IF NEW.funding_amount < 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funding amount cannot be negative.';
+    END IF;
+    IF NEW.funding_date > CURDATE() THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funding date cannot be in the future.';
+    END IF;
+END$$
+
+CREATE TRIGGER trg_funding_no_negative_update
+BEFORE UPDATE ON Funding FOR EACH ROW
+BEGIN
+    IF NEW.funding_amount < 0 THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funding amount cannot be negative.';
+    END IF;
+    IF NEW.funding_date > CURDATE() THEN
+        SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Funding date cannot be in the future.';
+    END IF;
+END$$
+
+
+CREATE TRIGGER trg_project_audit_insert AFTER INSERT ON ResearchProject FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('INSERT','ResearchProject',CAST(NEW.project_id AS CHAR),NULL,
+            CONCAT('title=',NEW.project_title,'; status=',NEW.status,
+                   '; start=',NEW.start_date,'; end=',COALESCE(NEW.end_date,'NULL'),
+                   '; dept=',NEW.department_id,'; lead=',COALESCE(NEW.lead_faculty_id,'NULL')));
+END$$
+
+CREATE TRIGGER trg_project_audit_update AFTER UPDATE ON ResearchProject FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('UPDATE','ResearchProject',CAST(NEW.project_id AS CHAR),
+            CONCAT('title=',OLD.project_title,'; status=',OLD.status,
+                   '; start=',OLD.start_date,'; end=',COALESCE(OLD.end_date,'NULL'),
+                   '; dept=',OLD.department_id,'; lead=',COALESCE(OLD.lead_faculty_id,'NULL')),
+            CONCAT('title=',NEW.project_title,'; status=',NEW.status,
+                   '; start=',NEW.start_date,'; end=',COALESCE(NEW.end_date,'NULL'),
+                   '; dept=',NEW.department_id,'; lead=',COALESCE(NEW.lead_faculty_id,'NULL')));
+END$$
+
+CREATE TRIGGER trg_project_audit_delete AFTER DELETE ON ResearchProject FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('DELETE','ResearchProject',CAST(OLD.project_id AS CHAR),
+            CONCAT('title=',OLD.project_title,'; status=',OLD.status,
+                   '; start=',OLD.start_date,'; end=',COALESCE(OLD.end_date,'NULL'),
+                   '; dept=',OLD.department_id,'; lead=',COALESCE(OLD.lead_faculty_id,'NULL')),NULL);
+END$$
+
+CREATE TRIGGER trg_faculty_prevent_delete_if_supervising
+BEFORE DELETE ON Faculty FOR EACH ROW
+BEGIN
+    DECLARE v_students INT DEFAULT 0;
+    DECLARE v_projects INT DEFAULT 0;
+    DECLARE v_lead     INT DEFAULT 0;
+    SELECT COUNT(*) INTO v_students FROM Student        WHERE supervisor_id  = OLD.faculty_id;
+    SELECT COUNT(*) INTO v_projects FROM FacultyProject WHERE faculty_id     = OLD.faculty_id;
+    SELECT COUNT(*) INTO v_lead     FROM ResearchProject WHERE lead_faculty_id = OLD.faculty_id;
+    IF v_students > 0 OR v_projects > 0 OR v_lead > 0 THEN
+        SIGNAL SQLSTATE '45000'
+            SET MESSAGE_TEXT = 'Cannot delete faculty: still assigned as supervisor/lead. Reassign first.';
+    END IF;
+END$$
+
+CREATE TRIGGER trg_publication_audit_insert AFTER INSERT ON Publication FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('INSERT','Publication',CAST(NEW.publication_id AS CHAR),NULL,
+            CONCAT('title=',NEW.title,'; type=',NEW.publication_type,
+                   '; year=',NEW.publication_year,'; doi=',COALESCE(NEW.doi,'NULL'),
+                   '; journal=',COALESCE(NEW.journal_name,'NULL')));
+END$$
+
+CREATE TRIGGER trg_publication_audit_update AFTER UPDATE ON Publication FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('UPDATE','Publication',CAST(NEW.publication_id AS CHAR),
+            CONCAT('title=',OLD.title,'; type=',OLD.publication_type,
+                   '; year=',OLD.publication_year,'; doi=',COALESCE(OLD.doi,'NULL'),
+                   '; journal=',COALESCE(OLD.journal_name,'NULL')),
+            CONCAT('title=',NEW.title,'; type=',NEW.publication_type,
+                   '; year=',NEW.publication_year,'; doi=',COALESCE(NEW.doi,'NULL'),
+                   '; journal=',COALESCE(NEW.journal_name,'NULL')));
+END$$
+
+CREATE TRIGGER trg_publication_audit_delete AFTER DELETE ON Publication FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (operation, table_name, record_pk, old_value, new_value)
+    VALUES ('DELETE','Publication',CAST(OLD.publication_id AS CHAR),
+            CONCAT('title=',OLD.title,'; type=',OLD.publication_type,
+                   '; year=',OLD.publication_year,'; doi=',COALESCE(OLD.doi,'NULL'),
+                   '; journal=',COALESCE(OLD.journal_name,'NULL')),NULL);
+END$$
+DELIMITER ;
+
+
+
+INSERT INTO StudentProject (student_id, project_id, project_role, contribution_percentage)
+VALUES (1, 11, 'Researcher', 50);
+
+UPDATE ResearchProject SET status = 'Completed' WHERE project_id = 2;
+SELECT * FROM AuditLog WHERE table_name = 'ResearchProject' ORDER BY audit_id DESC LIMIT 1;
+
+UPDATE Publication SET journal_name = 'New Journal' WHERE publication_id = 1;
+SELECT * FROM AuditLog WHERE table_name = 'Publication' ORDER BY audit_id DESC LIMIT 1;
+
+
+
+
+
+
+SET @app_user = 'faculty:ahmed.alfarsi';
+
+DELIMITER $$
+CREATE FUNCTION fn_current_app_user()
+RETURNS VARCHAR(100)
+NOT DETERMINISTIC
+NO SQL
+BEGIN
+    RETURN COALESCE(@app_user, CURRENT_USER());
+END$$
+DELIMITER ;
+
+DROP TRIGGER IF EXISTS trg_student_audit_insert;
+DROP TRIGGER IF EXISTS trg_student_audit_update;
+DROP TRIGGER IF EXISTS trg_student_audit_delete;
+DELIMITER $$
+
+CREATE TRIGGER trg_student_audit_insert
+AFTER INSERT ON Student
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(), 'INSERT', 'Student', CAST(NEW.student_id AS CHAR),
+            NULL,
+            CONCAT('name=', NEW.first_name,' ',NEW.last_name,
+                   '; email=', NEW.email,
+                   '; status=', NEW.academic_status,
+                   '; program=', NEW.program_id,
+                   '; supervisor=', COALESCE(NEW.supervisor_id,'NULL')));
+END$$
+
+CREATE TRIGGER trg_student_audit_update
+AFTER UPDATE ON Student
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(), 'UPDATE', 'Student', CAST(NEW.student_id AS CHAR),
+            CONCAT('name=', OLD.first_name,' ',OLD.last_name,
+                   '; email=', OLD.email,
+                   '; phone=', COALESCE(OLD.phone,'NULL'),
+                   '; status=', OLD.academic_status,
+                   '; program=', OLD.program_id,
+                   '; supervisor=', COALESCE(OLD.supervisor_id,'NULL')),
+            CONCAT('name=', NEW.first_name,' ',NEW.last_name,
+                   '; email=', NEW.email,
+                   '; phone=', COALESCE(NEW.phone,'NULL'),
+                   '; status=', NEW.academic_status,
+                   '; program=', NEW.program_id,
+                   '; supervisor=', COALESCE(NEW.supervisor_id,'NULL')));
+END$$
+
+CREATE TRIGGER trg_student_audit_delete
+AFTER DELETE ON Student
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(), 'DELETE', 'Student', CAST(OLD.student_id AS CHAR),
+            CONCAT('name=', OLD.first_name,' ',OLD.last_name,
+                   '; email=', OLD.email,
+                   '; phone=', COALESCE(OLD.phone,'NULL'),
+                   '; status=', OLD.academic_status,
+                   '; program=', OLD.program_id,
+                   '; supervisor=', COALESCE(OLD.supervisor_id,'NULL')),
+            NULL);
+END$$
+
+DELIMITER ;
+
+
+DROP TRIGGER IF EXISTS trg_funding_audit_insert;
+DROP TRIGGER IF EXISTS trg_funding_audit_update;
+DROP TRIGGER IF EXISTS trg_funding_audit_delete;
+DELIMITER $$
+
+CREATE TRIGGER trg_funding_audit_insert
+AFTER INSERT ON Funding
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(), 'INSERT', 'Funding', CAST(NEW.funding_id AS CHAR),
+            NULL,
+            CONCAT('project=', NEW.project_id,
+                   '; source=', NEW.source_id,
+                   '; amount=', NEW.funding_amount,
+                   '; date=', NEW.funding_date));
+END$$
+
+CREATE TRIGGER trg_funding_audit_update
+AFTER UPDATE ON Funding
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(), 'UPDATE', 'Funding', CAST(NEW.funding_id AS CHAR),
+            CONCAT('project=', OLD.project_id,
+                   '; source=', OLD.source_id,
+                   '; amount=', OLD.funding_amount,
+                   '; date=', OLD.funding_date),
+            CONCAT('project=', NEW.project_id,
+                   '; source=', NEW.source_id,
+                   '; amount=', NEW.funding_amount,
+                   '; date=', NEW.funding_date));
+END$$
+
+CREATE TRIGGER trg_funding_audit_delete
+AFTER DELETE ON Funding
+FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(), 'DELETE', 'Funding', CAST(OLD.funding_id AS CHAR),
+            CONCAT('project=', OLD.project_id,
+                   '; source=', OLD.source_id,
+                   '; amount=', OLD.funding_amount,
+                   '; date=', OLD.funding_date),
+            NULL);
+END$$
+
+DELIMITER ;
+
+
+DROP TRIGGER IF EXISTS trg_project_audit_insert;
+DROP TRIGGER IF EXISTS trg_project_audit_update;
+DROP TRIGGER IF EXISTS trg_project_audit_delete;
+DROP TRIGGER IF EXISTS trg_publication_audit_insert;
+DROP TRIGGER IF EXISTS trg_publication_audit_update;
+DROP TRIGGER IF EXISTS trg_publication_audit_delete;
+DELIMITER $$
+
+CREATE TRIGGER trg_project_audit_insert AFTER INSERT ON ResearchProject FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(),'INSERT','ResearchProject',CAST(NEW.project_id AS CHAR),NULL,
+            CONCAT('title=',NEW.project_title,'; status=',NEW.status,
+                   '; start=',NEW.start_date,'; end=',COALESCE(NEW.end_date,'NULL'),
+                   '; dept=',NEW.department_id,'; lead=',COALESCE(NEW.lead_faculty_id,'NULL')));
+END$$
+
+CREATE TRIGGER trg_project_audit_update AFTER UPDATE ON ResearchProject FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(),'UPDATE','ResearchProject',CAST(NEW.project_id AS CHAR),
+            CONCAT('title=',OLD.project_title,'; status=',OLD.status,
+                   '; start=',OLD.start_date,'; end=',COALESCE(OLD.end_date,'NULL'),
+                   '; dept=',OLD.department_id,'; lead=',COALESCE(OLD.lead_faculty_id,'NULL')),
+            CONCAT('title=',NEW.project_title,'; status=',NEW.status,
+                   '; start=',NEW.start_date,'; end=',COALESCE(NEW.end_date,'NULL'),
+                   '; dept=',NEW.department_id,'; lead=',COALESCE(NEW.lead_faculty_id,'NULL')));
+END$$
+
+CREATE TRIGGER trg_project_audit_delete AFTER DELETE ON ResearchProject FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(),'DELETE','ResearchProject',CAST(OLD.project_id AS CHAR),
+            CONCAT('title=',OLD.project_title,'; status=',OLD.status,
+                   '; start=',OLD.start_date,'; end=',COALESCE(OLD.end_date,'NULL'),
+                   '; dept=',OLD.department_id,'; lead=',COALESCE(OLD.lead_faculty_id,'NULL')),NULL);
+END$$
+
+CREATE TRIGGER trg_publication_audit_insert AFTER INSERT ON Publication FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(),'INSERT','Publication',CAST(NEW.publication_id AS CHAR),NULL,
+            CONCAT('title=',NEW.title,'; type=',NEW.publication_type,
+                   '; year=',NEW.publication_year,'; doi=',COALESCE(NEW.doi,'NULL'),
+                   '; journal=',COALESCE(NEW.journal_name,'NULL')));
+END$$
+
+CREATE TRIGGER trg_publication_audit_update AFTER UPDATE ON Publication FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(),'UPDATE','Publication',CAST(NEW.publication_id AS CHAR),
+            CONCAT('title=',OLD.title,'; type=',OLD.publication_type,
+                   '; year=',OLD.publication_year,'; doi=',COALESCE(OLD.doi,'NULL'),
+                   '; journal=',COALESCE(OLD.journal_name,'NULL')),
+            CONCAT('title=',NEW.title,'; type=',NEW.publication_type,
+                   '; year=',NEW.publication_year,'; doi=',COALESCE(NEW.doi,'NULL'),
+                   '; journal=',COALESCE(NEW.journal_name,'NULL')));
+END$$
+
+CREATE TRIGGER trg_publication_audit_delete AFTER DELETE ON Publication FOR EACH ROW
+BEGIN
+    INSERT INTO AuditLog (db_user, operation, table_name, record_pk, old_value, new_value)
+    VALUES (fn_current_app_user(),'DELETE','Publication',CAST(OLD.publication_id AS CHAR),
+            CONCAT('title=',OLD.title,'; type=',OLD.publication_type,
+                   '; year=',OLD.publication_year,'; doi=',COALESCE(OLD.doi,'NULL'),
+                   '; journal=',COALESCE(OLD.journal_name,'NULL')),NULL);
+END$$
+
+DELIMITER ;
+
+
+DELIMITER $$
+CREATE TRIGGER trg_auditlog_no_update BEFORE UPDATE ON AuditLog FOR EACH ROW
+BEGIN
+    SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'AuditLog is append-only; UPDATE is not permitted.';
+END$$
+
+CREATE TRIGGER trg_auditlog_no_delete BEFORE DELETE ON AuditLog FOR EACH ROW
+BEGIN
+    SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'AuditLog is append-only; DELETE is not permitted.';
+END$$
+DELIMITER ;
+
+
+CREATE OR REPLACE VIEW vw_AuditTrail AS
+SELECT
+    audit_id,
+    db_user,
+    operation,
+    table_name,
+    record_pk,
+    old_value,
+    new_value,
+    change_time,
+    DATE(change_time)   AS change_date,
+    TIME(change_time)   AS change_time_only
+FROM AuditLog
+ORDER BY audit_id DESC;
+
+
+
+
+SET @app_user = 'research_admin:mona.rahman';
+
+INSERT INTO Student (student_id, first_name, last_name, email, program_id, supervisor_id)
+VALUES (99, 'Test', 'Student', 'test.student99@student.edu', 1, 1);
+
+UPDATE Student SET academic_status = 'Suspended' WHERE student_id = 99;
+
+UPDATE ResearchProject SET status = 'Completed' WHERE project_id = 2;
+
+INSERT INTO Funding (funding_id, project_id, source_id, funding_amount, funding_date)
+VALUES (900, 1, 1, 50000.00, CURDATE());
+
+UPDATE Funding SET funding_amount = 60000.00 WHERE funding_id = 900;
+
+UPDATE Publication SET journal_name = 'Updated Journal' WHERE publication_id = 1;
+
+SELECT audit_id, db_user, operation, table_name, record_pk, change_time
+FROM AuditLog
+WHERE table_name IN ('Student','ResearchProject','Funding','Publication')
+ORDER BY audit_id DESC
+LIMIT 20;
+
+
+
+
+
+
+
+
+
+
+
